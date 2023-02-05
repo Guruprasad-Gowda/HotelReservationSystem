@@ -1,19 +1,15 @@
 package workshop;
 
 public class Hotel {
-    String hotelName;
-    String hotelNumber;
-    int weekDayRates;
-    int weekendDayRates;
+    private String hotelName;
+    private long regularCustomerCost;
 
     public Hotel() {
     }
 
-    public Hotel(String hotelName, String hotelNumber, int weekDayRates, int weekendDayRates) {
+    public Hotel(String hotelName, long regularCustomerCost) {
         this.hotelName = hotelName;
-        this.hotelNumber = hotelNumber;
-        this.weekDayRates = weekDayRates;
-        this.weekendDayRates = weekendDayRates;
+        this.regularCustomerCost = regularCustomerCost;
     }
 
     public String getHotelName() {
@@ -24,27 +20,18 @@ public class Hotel {
         this.hotelName = hotelName;
     }
 
-    public String getHotelNumber() {
-        return hotelNumber;
+
+    public long getRegularCustomerCost() {
+        return regularCustomerCost;
     }
 
-    public void setHotelNumber(String hotelNumber) {
-        this.hotelNumber = hotelNumber;
+    public void setRegularCustomerCost(long regularCustomerCost) {
+        this.regularCustomerCost = regularCustomerCost;
     }
 
-    public int getWeekDayRates() {
-        return weekDayRates;
+    @Override
+    public String toString() {
+        return "Hotels [hotelName=" + hotelName + "Regular Customer Cost=" + regularCustomerCost + "]\n";
     }
 
-    public void setWeekDayRates(int weekDayRates) {
-        this.weekDayRates = weekDayRates;
-    }
-
-    public int getWeekendDayRates() {
-        return weekendDayRates;
-    }
-
-    public void setWeekendDayRates(int weekendDayRates) {
-        this.weekendDayRates = weekendDayRates;
-    }
 }
